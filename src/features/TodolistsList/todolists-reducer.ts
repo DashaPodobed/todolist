@@ -49,7 +49,6 @@ export const {
     changeTodolistFilterAC, changeTodolistEntityStatusAC, setTodolistsAC
 } = slice.actions
 
-debugger
 export const todolistsReducer = slice.reducer
 
 // thunks

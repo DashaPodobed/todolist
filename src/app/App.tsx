@@ -46,22 +46,17 @@ function App({demo = false}: PropsType) {
         </div>
     }
 
+
     return (
         <div className="App">
             <ErrorSnackbar/>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton edge="start" color="inherit" aria-label="menu">
-                        <Menu/>
-                    </IconButton>
-                    <Typography variant="h6">
-                        News
-                    </Typography>
+                    <IconButton edge="start" color="inherit" aria-label="menu" />
                     {isLoggedIn && <Button color="inherit" onClick={authLogoutHandler}>Log out</Button>}
                 </Toolbar>
                 {status === 'loading' && <LinearProgress/>}
             </AppBar>
-
             <Container fixed>
                 <Switch>
                     <Route exact path={'/'} render={() => <TodolistsList demo={demo}/>}/>
